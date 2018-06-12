@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Base from './components/Base';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+  constructor() {
+     super()
+     this.state = {
+       open: false
+     }
+   }
+   handleToggle() {
+     this.setState({
+       open: !this.state.open
+     })
+   }
+   render() {
+     return (
+       <div>
+         <Base/>
+       </div>
+     );
+   }
 }
 
 export default App;
