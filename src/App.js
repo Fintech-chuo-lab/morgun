@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Base from './components/Base';
+// import Base from './components/Base';
+import Profile from './views/Profile/Profile.jsx';
 
 class App extends Component {
-  constructor() {
-     super()
-     this.state = {
-       open: false
-     }
-   }
-   handleToggle() {
-     this.setState({
-       open: !this.state.open
-     })
-   }
    render() {
      return (
        <div>
-         <Base/>
+         <Profile/>
        </div>
      );
    }
